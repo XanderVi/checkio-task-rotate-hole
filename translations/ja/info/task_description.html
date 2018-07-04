@@ -53,12 +53,22 @@
     <p>
         <strong>例:</strong>
     </p>
-    <pre class="brush: python">
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">
 rotate([1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1], [0, 1]) == [1, 8]
 rotate([1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1], [0, 1, 2]) == []
 rotate([1, 0, 0, 0, 1, 1, 0, 1], [0, 4, 5]) == [0]
 rotate([1, 0, 0, 0, 1, 1, 0, 1], [5, 4, 5]) == [0, 5]
-    </pre>
+</pre>
+{% else %}
+<pre class="brush: python">
+rotate([1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1], [0, 1]) == [1, 8]
+rotate([1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1], [0, 1, 2]) == []
+rotate([1, 0, 0, 0, 1, 1, 0, 1], [0, 4, 5]) == [0]
+rotate([1, 0, 0, 0, 1, 1, 0, 1], [5, 4, 5]) == [0, 5]
+</pre>
+{% endif %}
+
 </div>
 
 <p class="for_info_only">
